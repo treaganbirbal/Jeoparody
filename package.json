@@ -1,0 +1,19 @@
+{
+  "name": "jeoparody",
+  "version": "1.0.0",
+  "description": "Fun web app using Javascript & the jservice/jeopardy api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treaganbirbal/Jeoparody.git"
+  },
+  "author": "Treagan Birbal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treaganbirbal/Jeoparody/issues"
+  },
+  "homepage": "https://github.com/treaganbirbal/Jeoparody#readme"
+}
