@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let baseUrl = 'http://jservice.io'
 
-fetch('https://ghibliapi.herokuapp.com/films')
+fetch(`${baseUrl}/api/clues`)
          .then(response => {
              return response.json()
          }).then((data) => {
-             console.log(data)
+             console.log(data) 
      })
 
 
