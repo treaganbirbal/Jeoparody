@@ -18,6 +18,7 @@ const updateSelect = (clues) => {
     clues.forEach(clue => {
         let catOption = document.createElement('option')
         catOption.innerText = clue.category.title
+        catOption.value = clue.category.title
         selector.appendChild(catOption)
     })
 }
