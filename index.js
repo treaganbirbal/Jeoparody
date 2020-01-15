@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     let body = document.querySelector('body')
-    let select = document.createElement('select')
+    let selector = document.createElement('select')
     let options = document.createElement('option')
     // body.appendChild(select)
-    
-    
+    selector.classList.add('movie-selector')
 
 
 
@@ -15,14 +14,15 @@ let option = document.createElement('option')
 
 
 const fireRequest = (url, callback) => {
-    fetch(url).then(res => res.json().then(data => console.log(data)))
+    fetch(url).then(res => res.json().then(data => callback(data)))
 }
 
 const updateSelect = (movies) => {
-    debugger
+    movies.forEach
 }
 
-fireRequest(`${baseUrl}/api/clues`)
+fireRequest(`${baseUrl}/api/clues`, updateSelect)
+
 
 
 })
