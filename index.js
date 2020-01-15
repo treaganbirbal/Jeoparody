@@ -11,14 +11,14 @@ let option = document.createElement('option')
 
 
 const fireRequest = (url, callback) => {
-    fetch(url).then(res => res.json().then(data => callback(data)))
+    fetch(url).then(res =>  res.json().then(data => callback(data)))
 }
 
 const updateSelect = (clues) => {
     clues.forEach(clue => {
         let catOption = document.createElement('option')
         catOption.innerText = clue.category.title
-        catOption.value = clue.category.title
+        catOption.value = clue.id
         selector.appendChild(catOption)
     })
 }
