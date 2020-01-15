@@ -14,15 +14,20 @@ document.querySelector('body').appendChild(select)
 let option = document.createElement('option')
 
 
-const fireRequest = () => {
-    // fetch(`${baseUrl}/api/clues`)
-    console.log('hello')
+const fireRequest = (url, callback) => {
+    fetch(url).then(res => res.json().then(data => console.log(data)))
 }
 
 const updateSelect = (movies) => {
     debugger
 }
+
+fireRequest(`${baseUrl}/api/clues`)
+
+
 })
+
+
 
 
     
