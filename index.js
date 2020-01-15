@@ -13,7 +13,6 @@ let option = document.createElement('option')
 
 selector.addEventListener("change", (event) => {
     displayClue(clueObj[event.target.value])
-    // debugger
 })
 
 const displayClue = (clue) => {
@@ -34,7 +33,6 @@ const fireRequest = (url, callback) => {
 const updateSelect = (clues) => {
     clues.forEach(clue => {
         clueObj[clue.id] = clue
-        console.log(clueObj)
         let catOption = document.createElement('option')
         catOption.innerText = clue.category.title
         catOption.value = clue.id
