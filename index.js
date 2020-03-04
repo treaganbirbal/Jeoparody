@@ -27,7 +27,11 @@ const displayClue = (clue) => {
 }
 
 const fireRequest = (url, callback) => {
-    fetch(url).then(res =>  res.json().then(data => callback(data)))
+    fetch(url)
+    .then(res => 
+    res.json()
+    .then(data => 
+    callback(data)))
 }
 
 const updateSelect = (clues) => {
