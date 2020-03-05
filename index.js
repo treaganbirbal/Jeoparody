@@ -13,6 +13,7 @@ let option = document.createElement('option')
 
 selector.addEventListener("change", (event) => {
     displayClue(clueObj[event.target.value])
+    
 })
 
 const displayClue = (clue) => {
@@ -32,11 +33,7 @@ const fireRequest = (url, callback) => {
     .then(data => callback(data))
     )}
 
-const getAnswers = (event) => {
-    selector.addEventListener('click', () => {
-        console.log(event)
-    })
-}
+
 
 const updateSelect = (clues) => {
     clues.forEach(clue => {
@@ -46,7 +43,7 @@ const updateSelect = (clues) => {
         catOption.value = clue.id
         selector.appendChild(catOption)
     })
-    getAnswers()
+    
 }
 
 fireRequest(`${baseUrl}/api/clues`, updateSelect)
