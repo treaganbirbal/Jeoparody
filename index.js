@@ -28,10 +28,14 @@ const displayClue = (clue) => {
 
 const fireRequest = (url, callback) => {
     fetch(url)
-    .then(res => 
-    res.json()
-    .then(data => 
-    callback(data)))
+    .then(res => res.json()
+    .then(data => callback(data))
+    )}
+
+const getAnswers = (event) => {
+    selector.addEventListener('click', () => {
+        console.log(event)
+    })
 }
 
 const updateSelect = (clues) => {
@@ -42,6 +46,7 @@ const updateSelect = (clues) => {
         catOption.value = clue.id
         selector.appendChild(catOption)
     })
+    getAnswers()
 }
 
 fireRequest(`${baseUrl}/api/clues`, updateSelect)
